@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <ul class="navigation">
+        <li class="active">
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-house"></i></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-shop"></i></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+                <span class="text">Search</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                <span class="text">Cart</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <span class="text">Account</span>
+            </a>
+        </li>
+    </ul>
+
+    <script>
+        var list = document.querySelectorAll(".navigation li");
+
+        function activeLink(){
+            list.forEach((item => 
+            item.classList.remove('active')));
+            this.classList.add('active');
+        }
+        list.forEach((item =>
+        item.addEventListener('click', activeLink)))
+    </script>
+</body>
+</html>
